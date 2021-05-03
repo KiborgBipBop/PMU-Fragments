@@ -1,13 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:weightSum="5"
+    android:orientation="vertical"
     tools:context=".Selection">
 
-    <TextView
+    <ImageView
+        android:id="@+id/image_preview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="SELECTION" />
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:backgroundTint="#F3F3F3"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2">
 
-</FrameLayout>
+        <Button
+            android:id="@+id/browse"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#4CAF50"
+            android:text="BROWSE" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="#4CAF50"
+            android:layout_weight="1"
+            android:text="ADD"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="#4CAF50"
+        android:layout_weight="1"
+        android:text="CLOSE"/>
+
+</LinearLayout>
