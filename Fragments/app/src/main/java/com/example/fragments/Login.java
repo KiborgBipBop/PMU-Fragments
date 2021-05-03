@@ -75,11 +75,11 @@ public class Login extends Fragment {
     }
 
     public void loadGallery(){
-        AddButton buttonF = new AddButton();
-        Gallery galleryF = new Gallery();
+        AddButton buttonFragment = new AddButton();
+        Gallery galleryFragment = new Gallery();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.add(R.id.top_layout, buttonF);
-        transaction.add(R.id.main_layout, galleryF);
+        transaction.add(R.id.top_layout, buttonFragment);
+        transaction.add(R.id.main_layout, galleryFragment);
         transaction.remove(this);
         transaction.commit();
     }
